@@ -13,6 +13,105 @@ body {
   color: #727272;
 }
 
+button {
+  background: none;
+  border: 2px solid #d4d4d4;
+  border-radius: 10px;
+  color: #727272;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:focus {
+  outline: none;
+}
+
+button:hover {
+  border-color: #727272;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+
+.overlay.hide {
+  display: none;
+}
+
+.game-start {
+  max-width: 600px;
+  margin: 120px auto;
+  background: #d4d4d4;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+}
+
+.game-start form {
+  margin: 20px 0 0 0;
+  width: 100%;
+}
+
+.game-start form .form-item {
+  padding: 10px;
+  width: 300px;
+  margin: 10px auto;
+}
+
+.game-start form .form-item label {
+  padding: 0 5px 0 0;
+  float: left;
+}
+
+.game-start form .form-item input {
+  width: 100px;
+  display: block;
+  float: right;
+}
+
+.game-start form .form-item button {
+  padding: 10px;
+  width: 100px;
+  margin: 10px auto;
+}
+
+.game-start.hide {
+  display: none;
+}
+
+.game-over {
+  max-width: 600px;
+  margin: 120px auto;
+  background: #d4d4d4;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  display: none;
+}
+
+.game-over p {
+  margin: 20px 0 18px 0;
+  font-size: 20px;
+}
+
+.game-over button {
+  padding: 10px;
+  width: 200px;
+  margin: 0 auto;
+}
+
+.game-over.show {
+  display: block;
+}
+
 .container {
   max-width: 600px;
   margin: 50px auto;
@@ -42,27 +141,25 @@ body {
   padding: 20px 0;
   -ms-flex: 0 0 30%;
       flex: 0 0 30%;
-  background: none;
-  border: 2px solid #d4d4d4;
-  border-radius: 10px;
-  color: #727272;
-  text-transform: uppercase;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.button-wrap button:focus {
-  outline: none;
-}
-
-.button-wrap button:hover {
-  border-color: #727272;
 }
 
 .box {
   background: #dadada;
   border-radius: 10px;
   padding: 10px 20px;
+}
+
+.game-setup {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0 0 20px 0;
+}
+
+.game-setup p {
+  -ms-flex: 0 0 50%;
+      flex: 0 0 50%;
 }
 
 .messages {

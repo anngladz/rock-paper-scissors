@@ -11,9 +11,33 @@
 </head>
 
 <body>
+    <div class="overlay">
+        <div class="game-start">
+            <h3>Welcome!</h3>
+            <form id="info">
+                <div class="form-item">
+                    <label>Player name:</label><input type="text" name="name" maxlength="20" required>
+                </div>
+                <div class="form-item">
+                    <label>Number of rounds:</label><input type="number" name="number" min="10" max="100" required>
+                </div>
+                <div class="form-item">
+                    <button type="submit" value="Play!">Play!</button></div>
+            </form>
+        </div>
+        <div class="game-over">
+            <h3>Game over!</h3>
+            <p class="final-score"></p>
+            <button onClick="window.location.reload();">Play again!</button>
+        </div>
+    </div>
     <div class="container">
         <h1>Rock-paper-scissors game!</h1>
         <div class="box">
+            <div class="game-setup">
+                <p class="player-name"></p>
+                <p>Rounds: <span class="round-counter"></span>/<span class="rounds"></span></p>
+            </div>
             <p>Choose your move:</p>
             <div class="button-wrap">
                 <button id="play-rock">Rock</button>
@@ -21,8 +45,8 @@
                 <button id="play-scissors">Scissors</button>
             </div>
             <div class="messages">
-                <p class="message computer-move"></p>
                 <p class="message player-move"></p>
+                <p class="message computer-move"></p>
                 <p class="message result"></p>
             </div>
             <div class="points">
