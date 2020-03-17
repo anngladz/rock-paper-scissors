@@ -71,7 +71,8 @@ button:hover {
   float: left;
 }
 
-.game-start form .form-item input {
+.game-start form .form-item input,
+.game-start form .form-item select {
   width: 100px;
   display: block;
   float: right;

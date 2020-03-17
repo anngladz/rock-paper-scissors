@@ -50,7 +50,7 @@ function playGame(playerInput, playerName) {
 
   displayResult(computerMove, playerMove);
 
-  if (computerScore + playerScore + draws >= document.querySelector('input[name="number"]').value) {
+  if (computerScore + playerScore + draws >= document.querySelector('select').value) {
     document.querySelector('.overlay').classList.remove('hide');
     document.querySelector('.game-over').classList.add('show');
     if (computerScore > playerScore) {
@@ -76,7 +76,7 @@ function startGame(event) {
   document.querySelector('.overlay').classList.add('hide');
   document.querySelector('.game-start').classList.add('hide');
   document.querySelector('.player-name').innerHTML = 'Player name: ' + document.querySelector('input[name="name"]').value;
-  document.querySelector('.rounds').innerHTML = document.querySelector('input[name="number"]').value;
+  document.querySelector('.rounds').innerHTML = document.querySelector('select').value;
   document.querySelector('.round-counter').innerHTML = 0;
 }
 
